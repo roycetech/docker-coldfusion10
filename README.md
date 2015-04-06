@@ -2,6 +2,8 @@
 Docker is a really cool framework that lets you put different parts of your applications in containers which are much smaller faster lighterweight things that are sort of similar to a VM.
 You can learn more about containers and docker specifically at the "[What is Docker](https://www.docker.com/whatisdocker/)" page
 
+You can find more details about how this all works (and links to some supporting files at adobe) in my blog post on [creating a coldfusion docker container](http://code.rawlinson.us/2014/08/create-a-coldfusion-docker-container.html).
+
 # What is ColdFusion?
 ColdFusion is two things - a server created by Adobe Inc.  This server parses and serves pages written in one of two dialects of ColdFusion - CFML (markup language) and CFSCRIPT (script).
 
