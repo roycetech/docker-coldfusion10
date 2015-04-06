@@ -7,6 +7,9 @@ ColdFusion is two things - a server created by Adobe Inc.  This server parses an
 
 There are some open source competitors to Adobe ColdFusion server such as Railo and BlueDragon.  This container provides a linux based installation of Adobe's ColdFusion Server 10 patched to hotfix version 13.
 
+Download the binary from Adobe and put it on your network where it is accessible. You need to do this so the prepare.sh works. Once you login to the Adobe site you can get the relevant binary from http://trials3.adobe.com/AdobeProducts/CSTD/11/linux64/ColdFusion_11_WWEJ_linux64.bin – just change the CSTD/11/ to CSTD/10/ if you want CF 10 and change the 11 in the bin file and directory path to 10. Like so: http://trials3.adobe.com/AdobeProducts/CSTD/10/linux64/ColdFusion_10_WWEJ_linux64.bin
+
+
 # How to use this repository
 
 ColdFusion 10 as Docker image on Ubuntu 14.04.
