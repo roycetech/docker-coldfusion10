@@ -22,11 +22,11 @@ If you are on a VM or something and you need to download the coldfusion binary a
 
 Once you have the CF binary and patches in the /install/build directory you can build the Docker container:
 
-    docker build -t coldfusion10_mxunit .
+    docker build -t coldfusion10_dev .
 
 And run it with:
 
-    docker run -d -p 8500:80 -v <full-path-to-your-cf-project>:/var/www/<contextpath> coldfusion10_mxunit
+    docker run -d -p 8500:80 -v <full-path-to-your-cf-project>:/var/www/<contextpath> coldfusion10_dev
 
 # Credits
 This is entirely based on the work found at https://github.com/finalcut/docker-coldfusion10
