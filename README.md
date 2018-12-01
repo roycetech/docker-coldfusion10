@@ -20,17 +20,16 @@ If you are on a VM or something and you need to download the coldfusion binary a
 
     ./prepare.sh
 
-Once you have the CF binary and patches in the /install/build direcotry you can build the Docker container:
+Once you have the CF binary and patches in the /install/build directory you can build the Docker container:
 
-    docker build -t cf10 .
+    docker build -t coldfusion10_mxunit .
 
 And run it with:
 
-    docker run -d -p 8880:80 -v /var/www:/var/www cf10
-
+    docker run -d -p 8500:80 -v <full-path-to-your-cf-project>:/var/www/<contextpath> coldfusion10_mxunit
 
 # Credits
-This is entirely based on the work found at https://github.com/naag/docker-coldfusion11
+This is entirely based on the work found at https://github.com/finalcut/docker-coldfusion10
 
 The silent installation of ColdFusion is accomplished with a ./build/install/installer.profile file. The syntax for that file is described in this [Adobe blog post](: http://blogs.adobe.com/cfdoc/2009/10/performing_a_silent_installation_of_coldfusion_9.html).
 
@@ -46,3 +45,12 @@ The CF installation script was written by Jan Ruusuvuori and seems to only exist
 3. You can learn more about the coldfusion installation by looking in `./build/install/installer.profile`
 4. If you want to build your own container instead of using this one check out [these instructions](https://github.com/finalcut/docker-coldfusion10/blob/master/BUILD_INSTRUCTIONS.md)
 5. Finally, I map port 80 on the CF server to port 8880 and I have it in the usage instructions here to make it easier for me to copy paste.  Use whatever port mapping works for you.
+
+# Fork information
+Added the following changes:
+
+1. Change security update to the latest. Last update was Nov 2017, v23.
+2. Fix the health check in the script `wget -O`
+3. Changed the location of the installers to my personal s3 bucket. Original locations in the script are no longer accessible. File was copied from the links in this website: [](http://www.cfmlrepo.com/)
+4. Added mxunit and testbox.
+5. Changed run instruction to include your project folder.
